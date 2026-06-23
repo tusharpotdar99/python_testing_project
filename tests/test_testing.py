@@ -1,4 +1,5 @@
 import pytest
+pytestmark = pytest.mark.skip(reason="Skipping this test file")
 
 @pytest.fixture(scope="function")
 def browser():

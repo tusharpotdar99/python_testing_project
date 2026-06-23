@@ -1,15 +1,11 @@
-import time
 
-import pytest
-from selenium import webdriver
 
-@pytest.fixture
-def driver():
-    driver = webdriver.Chrome()
-    driver.get("http://localhost/opencart/")
-    yield driver
-    driver.quit()
-
-def test_title(driver):
+def test_Home_page_title(driver):
     print(driver.title)
     assert "Your Store" in driver.title
+
+
+def test_Home_page_url(driver):
+    print(driver.current_url)
+    assert "http://localhost/opencart/" in driver.current_url
+

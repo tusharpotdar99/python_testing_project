@@ -1,0 +1,15 @@
+2026-06-24 01:14:42,147 - INFO - Opening Login page
+2026-06-24 01:14:42,299 - INFO - Navigating My account menu
+2026-06-24 01:14:43,170 - INFO - clicking login option
+2026-06-24 01:14:46,621 - INFO - Entering valid details and clicking on login button
+2026-06-24 01:14:46,815 - INFO - verifying login success
+2026-06-24 01:14:51,166 - INFO - Opening Login page
+2026-06-24 01:14:51,598 - INFO - Navigating My account menu
+2026-06-24 01:14:52,322 - INFO - clicking login option
+2026-06-24 01:14:55,965 - INFO - Entering invalid details and clicking on login button
+2026-06-24 01:14:56,114 - INFO - verifying login failed and warning
+2026-06-24 01:15:00,481 - INFO - Opening Login page
+2026-06-24 01:15:00,481 - INFO - entering valid details and clicking on login button
+2026-06-24 01:15:02,934 - INFO - verifying login success
+2026-06-24 01:15:10,793 - INFO - entering invalid details and clicking on login button
+2026-06-24 01:15:13,039 - INFO - verifying login failed and warning

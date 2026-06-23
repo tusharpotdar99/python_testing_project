@@ -23,7 +23,9 @@ class LoginPageAdv(BasePage):
         self.click(self.login_button)
 
     def verify_login(self):
+        self.driver.save_screenshot("screenshots/verify_login.png")
         return self.is_displayed(self.my_account_label)
 
     def verify_error_alert(self):
+        self.driver.save_screenshot("screenshots/error_alert.png")
         return self.get_text(self.alert_path)

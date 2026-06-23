@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+from webdriver_manager.core import driver
 
 
 class LoginPage:
@@ -41,6 +41,7 @@ class LoginPage:
         self.click_login_button()
 
     def is_my_account_label_displayed(self):
+        self.driver.save_screenshot("screenshots/login_test_success.png")
         return self.driver.find_element(*self.my_account_label).is_displayed()
 
     def get_alert_text(self):
@@ -48,6 +49,7 @@ class LoginPage:
         alert = wait.until(EC.visibility_of_element_located(self.alert_path))
         # alert = self.driver.find_element(*self.alert_path)
         # alert = driver.find_element(By.XPATH, "//div[contains(text(),'Warning')]")
+        self.driver.save_screenshot("screenshots/login_test_failed.png")
         text = alert.text
         self.driver.find_element(*self.close_btn).click()
         return text

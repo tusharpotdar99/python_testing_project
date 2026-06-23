@@ -10,14 +10,14 @@ def test_cart():
     print("This is regression test cart test")
     assert True
 
-@pytest.mark.skip
-def test_skipped():
-    print("This is skipped test")
-
-@pytest.mark.skipif(True, reason="Not Ready")
-def test_ready():
-    pass
-
-@pytest.mark.xfail
-def test_demo():
-    assert False
+# @pytest.mark.skip
+# def test_skipped():
+#     print("This is skipped test")
+#
+# @pytest.mark.skipif(True, reason="Not Ready")
+# def test_ready():
+#     pass
+#
+# @pytest.mark.xfail
+# def test_demo():
+#     assert False

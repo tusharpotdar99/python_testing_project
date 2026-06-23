@@ -1,7 +1,10 @@
 import time
 
 from selenium.webdriver.common.by import By
+
+from pages.login_page_adv import LoginPageAdv
 from pages.login_page import LoginPage
+
 
 def test_valid_login(driver):
 
@@ -22,4 +25,20 @@ def test_invalid_login(driver):
     alert_text = login_page.get_alert_text()
     print(alert_text)
     assert "Warning" in alert_text
+
+def test_valid_login_adv(driver):
+    login_page_adv = LoginPageAdv(driver)
+
+    login_page_adv.login_adv_method("tusharpotdar99@gmail.com","TushOC@1999")
+
+    assert login_page_adv.verify_login()
+
+def test_invalid_login_adv(driver):
+    login_page_adv = LoginPageAdv(driver)
+
+    login_page_adv.login_adv_method("tusharpotdar99@gmail.com","TushOC@19")
+
+    assert login_page_adv.verify_error_alert()
+
+
 
